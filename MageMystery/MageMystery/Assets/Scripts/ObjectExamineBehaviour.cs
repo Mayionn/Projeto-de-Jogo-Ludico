@@ -1,15 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ObjectExamineBehaviour : MonoBehaviour {
 
-    public enum ACTIONS { NONE, DESTROY }
+    public enum ACTIONS { NONE, DESTROY, RED }
 
     public bool trigger = false;
     public GameObject example;
+    public Material material;
 
     private ACTIONS action = ACTIONS.NONE;
+
+
+    // Use this for initialization
+    void Start()
+    {
+        material = GetComponent<Renderer>().material;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -17,13 +26,18 @@ public class ObjectExamineBehaviour : MonoBehaviour {
         {
             // trigger = true;
 
-            if (action != ACTIONS.NONE)
+            if (action == ACTIONS.DESTROY)
             {
                 Destroy(example);
                 action = ACTIONS.NONE;
             }
 
             Debug.Log("Made a Collission");
+
+            if (action == ACTIONS.RED)
+            {
+                material.color = Color.red;
+            }
         }
     }
 
@@ -46,16 +60,20 @@ public class ObjectExamineBehaviour : MonoBehaviour {
 
         //}
 
-        action = ACTIONS.DESTROY;
+        
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            action = ACTIONS.RED;
+        } else
+        {
+            action = ACTIONS.DESTROY;
+        }
     }
 
-    // Use this for initialization
-    void Start () {
-		
-	}
+
+
+
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
