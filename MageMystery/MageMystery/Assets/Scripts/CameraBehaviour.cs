@@ -7,7 +7,6 @@ public class CameraBehaviour : MonoBehaviour
     public GameObject targetObject;
     private float targetAngle = 0;
     const float rotationSpeed = 5f;
-    public GameObject[] Walls;
 
 
 
