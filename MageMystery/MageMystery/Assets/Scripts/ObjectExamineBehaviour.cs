@@ -2,42 +2,74 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Fungus;
+using UnityEngine.AI;
+using UnityEngine.Events;
 
 public class ObjectExamineBehaviour : MonoBehaviour {
 
-    public enum ACTIONS { NONE, DESTROY, RED }
+    public enum ACTIONS { NONE, DEFAULT, ELEMENT,  }
 
-    public bool trigger = false;
-    public GameObject example;
-    public Material material;
 
     private ACTIONS action = ACTIONS.NONE;
+    private Collider myCollider;
+    private bool trigger = false;
+
+    public Fungus.Flowchart myFlowchart;
+    public NavMeshAgent player;
 
 
-    // Use this for initialization
-    void Start()
+
+    private void Start()
     {
-        material = GetComponent<Renderer>().material;
     }
+
+
+    private void Update()
+    {
+        if (myFlowchart.HasExecutingBlocks())
+        {
+            player.enabled = false;
+        } else
+            player.enabled = true;
+
+        Debug.Log(action.ToString());
+
+        if (trigger && action != ACTIONS.NONE)
+        {
+            switch (action)
+            {
+                case ACTIONS.ELEMENT:
+                    {
+                        myFlowchart.ExecuteBlock("Element");
+
+                        if (myFlowchart.GetBooleanVariable("ElementRead"))
+                        {
+                            myFlowchart.ExecuteBlock("Element Read");
+                        }
+
+                        break; //se a acção for ESSENCIAL, adicionar a uma variável global para ser lida depois!
+                    }
+
+                case ACTIONS.DEFAULT:
+                    {
+                        myFlowchart.ExecuteBlock("Default");
+                        break;
+                    }
+
+            }
+
+            action = ACTIONS.NONE;
+        }
+    }
+    
+        
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Player")
         {
-            // trigger = true;
-
-            if (action == ACTIONS.DESTROY)
-            {
-                Destroy(example);
-                action = ACTIONS.NONE;
-            }
-
-            Debug.Log("Made a Collission");
-
-            if (action == ACTIONS.RED)
-            {
-                material.color = Color.red;
-            }
+            trigger = true;
         }
     }
 
@@ -46,34 +78,22 @@ public class ObjectExamineBehaviour : MonoBehaviour {
         if (other.tag == "Player")
         {
             trigger = false;
-            Debug.Log("Left");
         }
     }
 
     private void OnMouseDown()
     {
-        Debug.Log("Clicked");
 
-        //if (trigger == true)
-        //{
-        //    Destroy(example);
-
-        //}
-
-        
 
         if (Input.GetKey(KeyCode.A))
         {
-            action = ACTIONS.RED;
+            action = ACTIONS.ELEMENT;
         } else
         {
-            action = ACTIONS.DESTROY;
+            action = ACTIONS.DEFAULT;
         }
+
+
     }
-
-
-
-
-	
-
 }
+

@@ -1,4 +1,4 @@
-﻿Shader "Custom/SeeThrough 1" {
+﻿Shader "Custom/SeeThrough Standard" {
 	Properties {
 		_Color ("Color", Color) = (1,1,1,1)
 		_BWColour("Visible Colour", Color) = (0,0,0,0)
