@@ -25,11 +25,11 @@ public class CameraBehaviour : MonoBehaviour
             }*/
 
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.Z) || Input.GetMouseButtonDown(1))
         {
             targetAngle -= 90.0f;
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.C))
         {
             targetAngle += 90.0f;
         }

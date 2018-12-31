@@ -1,0 +1,39 @@
+{
+  "version": "1.8.0",
+  "aspectRatio": "1.7777777777777777",
+  "fps": 24,
+  "defaultBoardTiming": 2000,
+  "boards": [
+    {
+      "uid": "MNYF3",
+      "url": "board-1-MNYF3.png",
+      "newShot": false,
+      "lastEdited": 1546182595064,
+      "layers": {
+        "reference": {
+          "url": "board-1-MNYF3-reference.png",
+          "opacity": 0.75
+        },
+        "fill": {
+          "url": "board-1-MNYF3-fill.png"
+        },
+        "tone": {
+          "url": "board-1-MNYF3-tone.png"
+        },
+        "pencil": {
+          "url": "board-1-MNYF3-pencil.png"
+        },
+        "ink": {
+          "url": "board-1-MNYF3-ink.png"
+        },
+        "notes": {
+          "url": "board-1-MNYF3-notes.png"
+        }
+      },
+      "number": 1,
+      "shot": "1A",
+      "time": 0,
+      "lineMileage": 5031.4678374647065
+    }
+  ]
+}

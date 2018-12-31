@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour {
 
     private void Start()
     {
-        agent.updateRotation = false;
+        //agent.updateRotation = true;
     }
 
     void Update() {
