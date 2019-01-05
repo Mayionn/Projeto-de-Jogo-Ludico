@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class TurnRendererOn : MonoBehaviour {
 
-    public Renderer body;
+    public Renderer thing;
 
     private void Start()
     {
-        body = GetComponent<Renderer>();
+        thing = GetComponent<Renderer>();
     }
 
     public void RendererOn () {
         
-        body.enabled = true;
+        thing.enabled = true;
 	}
 
     public void RendererOff()
     {
 
-        body.enabled = false;
+        thing.enabled = false;
     }
 
 

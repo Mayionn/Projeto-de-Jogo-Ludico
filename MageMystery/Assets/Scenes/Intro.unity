@@ -865,8 +865,7 @@ MonoBehaviour:
     height: 859
   selectedBlocks:
   - {fileID: 84202919}
-  selectedCommands:
-  - {fileID: 84203000}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -2326,7 +2325,7 @@ MonoBehaviour:
   visibleOLD: 0
 --- !u!114 &84202996
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 84202917}
@@ -2353,7 +2352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &84202998
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 84202917}
@@ -2369,7 +2368,7 @@ MonoBehaviour:
   waitUntilFinished: 1
 --- !u!114 &84202999
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 84202917}
@@ -2382,7 +2381,7 @@ MonoBehaviour:
   indentLevel: 0
 --- !u!114 &84203000
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 84202917}
