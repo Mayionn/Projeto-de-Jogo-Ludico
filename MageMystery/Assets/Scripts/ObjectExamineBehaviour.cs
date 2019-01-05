@@ -20,6 +20,7 @@ public class ObjectExamineBehaviour : MonoBehaviour {
 
     public enum ACTIONS { NONE, DEFAULT, ELEMENT, DEATH, MIND, MATTER, TIME }
     public Fungus.Flowchart myFlowchart;
+
     public NavMeshAgent player;
     public Canvas uiSpell;
 

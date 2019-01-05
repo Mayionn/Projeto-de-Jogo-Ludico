@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: PlayerMaterial
-  m_Shader: {fileID: 4800000, guid: e213b2fac2915d84c83959a27d2be5e7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 08466a3c72c7e1645a0211dbe1818aa2, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

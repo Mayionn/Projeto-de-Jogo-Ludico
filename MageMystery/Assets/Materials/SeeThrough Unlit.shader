@@ -1,6 +1,7 @@
 ﻿Shader "Custom/SeeThrough Toon" {
 	Properties{
 		_Color("Main Color", Color) = (0.5,0.5,0.5,1)
+		_BWColour("Visible Colour", Color) = (0,0,0,0)
 		_MainTex("Base (RGB)", 2D) = "white" {}
 		_Ramp("Toon Ramp (RGB)", 2D) = "gray" {}
 	}
